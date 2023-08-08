@@ -1,0 +1,30 @@
+h1 {
+    color: salmon;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    color:brown;
+}
+
+footer {
+    background-color: gray;
+}
+
+#destaque {
+    background-color: aquamarine;
+}
+
+.borda-vermelha {
+    border-style: solid;
+    border-color: red;
+}
