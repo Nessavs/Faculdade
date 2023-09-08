@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Soma</h1>
+        
+        <p class="lead">Informe dois números inteiros para calcular a soma.</p>
+        
+        <form>
+          <div class="row">
+            <div class="col">
+              <input type="number" class="form-control" id="numero1" placeholder="Digite um número inteiro">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control" id="numero2" placeholder="Digite outro número inteiro">
+            </div>
+          </div>
+        </form>
+
+        <hr class="my-4">
+        
+        <button class="btn btn-primary btn-lg" onclick="somar()">Calcular</button>
+
+        <h1 class="display-4 text-center" id="resposta"></h1>
+      </div>
+
+      <a class="btn btn-success" href="index.html">Voltar</a>
+    </div>
+
+    <script type="text/javascript">
+      function somar(){
+        let n1 = document.getElementById('numero1').value;
+        let n2 = document.getElementById('numero2').value;
+        let r = parseInt(n1) + parseInt(n2);
+        document.getElementById('resposta').innerHTML = r;
+      }
+    </script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
