@@ -15,3 +15,9 @@
     border-color: #ff5a5f; /* Cor da borda personalizada ao passar o mouse */
   }
   
+/* Estilo para o vídeo - ajuste o tamanho conforme necessário */
+.video-container {
+  max-width: 440px; /* Largura máxima do vídeo */
+  margin: 0 auto; /* Centralizar horizontalmente */
+}
+
