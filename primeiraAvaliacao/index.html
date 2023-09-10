@@ -13,7 +13,7 @@
     /* Make the image fully responsive */
     .carousel-inner img {
       width: 100%;
-      height: 100%;
+      height: auto;
     }
     body {
       position: relative;
@@ -22,22 +22,26 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#section1">Catálogo</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section2">Sobre o salão</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section3">Contato</a>
-    </li>
-    <li class="nav-item">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">Catálogo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Sobre o salão</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Contato</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#section4">Depoimentos</a>
       </li>
-    
-  </ul>
+    </ul>
+  </div>
 </nav>
 
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -52,13 +56,13 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="1.png" alt="Hair width="1100" height="500">
+      <img src="1.png" alt="Hair">
     </div>
     <div class="carousel-item">
-      <img src="2.png" alt="hair1" width="1100" height="500">
+      <img src="2.png" alt="hair1">
     </div>
     <div class="carousel-item">
-      <img src="3.png" alt="hair2" width="1100" height="500">
+      <img src="3.png" alt="hair2">
     </div>
   </div>
   
@@ -72,13 +76,13 @@
 </div>
 
 <div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #E0727D;">
-<h1>Catálogo de Serviços</h1>
+<h1 class="text-center">Catálogo de Serviços</h1>
   <div class="container mt-5">
     <div class="row">
       <!-- Serviço 1 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="penteado1.jpg" class="card-img-top" alt="Serviço 1">
+          <img src="penteado1.jpg" class="card-img-top img-fluid" alt="Serviço 1">
           <div class="card-body">
             <h5 class="card-title">Cabelo Iluminado com Brilho Natural:</h5>
             <p class="card-text">Nosso talentoso time de coloristas está pronto para criar iluminações capilares personalizadas que adicionam um toque de brilho e luminosidade aos seus cabelos, mantendo a sua autenticidade e realçando a beleza natural dos seus fios.</p>
@@ -91,7 +95,7 @@
       <!-- Serviço 2 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="penteado2.jpg" class="card-img-top" alt="Serviço 2">
+          <img src="penteado2.jpg" class="card-img-top img-fluid" alt="Serviço 2">
           <div class="card-body">
             <h5 class="card-title">Corte com Estilo e Precisão:</h5>
             <p class="card-text">Nossos cabeleireiros especializados são mestres em cortes que se adaptam ao seu estilo de vida e à sua textura capilar, garantindo que você saia do salão com um corte que valoriza os seus traços e realça a sua personalidade.</p>
@@ -104,7 +108,7 @@
       <!-- Serviço 3 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="penteado3.jpg" class="card-img-top" alt="Serviço 3">
+          <img src="penteado3.jpg" class="card-img-top img-fluid" alt="Serviço 3">
           <div class="card-body">
             <h5 class="card-title">Hidratação e Saúde dos Cabelos:</h5>
             <p class="card-text">Entendemos a importância da hidratação para a vitalidade dos cabelos. Oferecemos tratamentos de hidratação profunda que restauram a saúde e o brilho natural dos seus fios, mantendo-os macios e resistentes.</p>
@@ -117,7 +121,7 @@
   </div>
 </div>
 <div id="section2" class="container-fluid" style="padding-top:100px;padding-bottom:100px; background-color: #D5D5D5;">
-  <h1>Sobre nós</h1>
+  <h1 class="text-center">Sobre nós</h1>
   <!-- Seção da Empresa -->
   <div class="container mt-5">
     <h1>Nessa's Salon</h1>
@@ -137,16 +141,16 @@
     
     <!-- Incorporação do Google Maps -->
     <h2>Localização no Mapa</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.6914071447295!2d-52.60399842602393!3d-27.13452815058549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b6a18142c0a3%3A0x8b11ef4e1a2c80bd!2sUnoesc%20Chapec%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1694139505504!5m2!1spt-BR!2sbr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.6914071447295!2d-52.60399842602393!3d-27.13452815058549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e4b6a18142c0a3%3A0x8b11ef4e1a2c80bd!2sUnoesc%20Chapec%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1694139505504!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
 </div>
 <div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #E0727D;">
-  <h1>Contato</h1>
+  <h1 class="text-center">Contato</h1>
  <!-- Seção de Contato -->
  <div class="container mt-5">
-    <h1>Estamos aqui para lhe atender</h1>
-        <p>Use o formulário abaixo para entrar em contato conosco.</p>
+    <h1 class="text-center">Estamos aqui para lhe atender</h1>
+        <p class="text-center">Use o formulário abaixo para entrar em contato conosco.</p>
     
     <!-- Formulário de Contato -->
     <form>
@@ -168,7 +172,7 @@
     <!-- Informações de Contato -->
 
     <div class="mt-5">
-      <h2>Informações de Contato</h2>
+      <h2 class="text-center">Informações de Contato</h2>
       <p>Nessa's Salon</p>
       <p>E-mail: contato@nessassalon.com</p>
       <p>Telefone: (49) 0000-0000</p>
@@ -179,79 +183,77 @@
       <a href="https://twitter.com/unoesc" class="btn btn-custom">Twitter</a>
     </div>
 </div>
-<div id="section4" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #E0727D;">
-    <h1>Depoimentos</h1>
+<div id="section4" class="container-fluid" style="padding-top:50px;padding-bottom:50px; background-color: #E0727D;">
+  <h1 class="text-center">Depoimentos</h1>
 
   <!-- Seção de Depoimentos -->
   <div class="container mt-5">
-    <div class="row">
-      <!-- Depoimento 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="cabelo1.jpg" class="card-img-top" alt="Depoimento 1">
-          <div class="card-body">
-            <p class="card-text">"Estou simplesmente encantada com o Nessa's Salon! Meu cabelo nunca esteve tão incrível. Eles entenderam exatamente o que eu queria e me deram um corte maravilhoso. Além disso, a iluminação capilar que fizeram trouxe um brilho natural aos meus fios. Recomendo a todos!"</p>
-            <p class="card-text"><strong>Ana</strong></p>
+      <!-- Primeira linha de depoimentos -->
+      <div class="row">
+          <!-- Depoimento 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="cabelo1.jpg" class="card-img-top img-fluid" alt="Depoimento 1">
+                  <div class="card-body">
+                      <p class="card-text">"Estou simplesmente encantada com o Nessa's Salon! Meu cabelo nunca esteve tão incrível. Eles entenderam exatamente o que eu queria e me deram um corte maravilhoso. Além disso, a iluminação capilar que fizeram trouxe um brilho natural aos meus fios. Recomendo a todos!"</p>
+                      <p class="card-text"><strong>Ana</strong></p>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-      
-      <!-- Depoimento 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="cabelo2.jpg" class="card-img-top" alt="Depoimento 2">
-          <div class="card-body">
-            <p class="card-text">"Cabelos cacheados são um orgulho, e o Nessa's Salon entende isso como ninguém. Eles são apaixonados por cachos e isso reflete no incrível serviço que prestam. Meu cabelo nunca esteve tão saudável e bonito. Estou muito grata!"</p>
-            <p class="card-text"><strong>Emanuele</strong></p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Depoimento 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="cabelo3.jpg" class="card-img-top" alt="Depoimento 3">
-          <div class="card-body">
-            <p class="card-text">"Sou cliente do Nessa's Salon há anos e não troco por nada. Eles me ajudaram a abraçar meus cachos naturais e me deram cortes que combinam perfeitamente com meu estilo de vida. É o meu lugar de confiança para cuidar da beleza dos meus cabelos."
 
-            </p>
-            <p class="card-text"><strong>Isabela</strong></p>
+          <!-- Depoimento 2 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="cabelo2.jpg" class="card-img-top img-fluid" alt="Depoimento 2">
+                  <div class="card-body">
+                      <p class="card-text">"Cabelos cacheados são um orgulho, e o Nessa's Salon entende isso como ninguém. Eles são apaixonados por cachos e isso reflete no incrível serviço que prestam. Meu cabelo nunca esteve tão saudável e bonito. Estou muito grata!"</p>
+                      <p class="card-text"><strong>Emanuele</strong></p>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Segunda linha de depoimentos -->
-    <div class="row">
-      <!-- Depoimento 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="cabelo4.jpg" class="card-img-top" alt="Depoimento 4">
-          <div class="card-body">
-            <p class="card-text">"Cuidar dos meus cabelos nunca foi tão agradável. O ambiente relaxante do Nessa's Salon me faz sentir em casa. Eles são especialistas em cabelos cacheados e sempre deixam meus cachos impecáveis. Recomendo de olhos fechados!"</p>
-            <p class="card-text"><strong>Julia</strong></p>
+          <!-- Depoimento 3 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="cabelo3.jpg" class="card-img-top img-fluid" alt="Depoimento 3">
+                  <div class="card-body">
+                      <p class="card-text">"Sou cliente do Nessa's Salon há anos e não troco por nada. Eles me ajudaram a abraçar meus cachos naturais e me deram cortes que combinam perfeitamente com meu estilo de vida. É o meu lugar de confiança para cuidar da beleza dos meus cabelos."</p>
+                      <p class="card-text"><strong>Isabela</strong></p>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
 
-      <!-- Depoimento 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="cabelo5.jpg" class="card-img-top" alt="Depoimento 5">
-          <div class="card-body">
-            <p class="card-text">"O Nessa's Salon é o meu santuário de beleza. As coloristas são incríveis e me deram a iluminação capilar dos meus sonhos. Meus amigos não param de elogiar como meu cabelo está incrível. Obrigada, Nessa's!"</p>
-            <p class="card-text"><strong>Maria</strong></p>
+      <!-- Segunda linha de depoimentos -->
+      <div class="row">
+          <!-- Depoimento 4 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="cabelo4.jpg" class="card-img-top img-fluid" alt="Depoimento 4">
+                  <div class="card-body">
+                      <p class="card-text">"Cuidar dos meus cabelos nunca foi tão agradável. O ambiente relaxante do Nessa's Salon me faz sentir em casa. Eles são especialistas em cabelos cacheados e sempre deixam meus cachos impecáveis. Recomendo de olhos fechados!"</p>
+                      <p class="card-text"><strong>Julia</strong></p>
+                  </div>
+              </div>
           </div>
-        </div>
+
+          <!-- Depoimento 5 -->
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="cabelo5.jpg" class="card-img-top img-fluid" alt="Depoimento 5">
+                  <div class="card-body">
+                      <p class="card-text">"O Nessa's Salon é o meu santuário de beleza. As coloristas são incríveis e me deram a iluminação capilar dos meus sonhos. Meus amigos não param de elogiar como meu cabelo está incrível. Obrigada, Nessa's!"</p>
+                      <p class="card-text"><strong>Maria</strong></p>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </div>
 
   <!-- Link para Iniciar Conversa pelo WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=5549991861529" target="_blank" >
-    <img src="wpp.png" alt="WhatsApp" width="50" height="50">
-    Iniciar Conversa pelo WhatsApp
+  <a href="https://api.whatsapp.com/send?phone=5549991861529" target="_blank" class="btn btn-primary btn-lg btn-block mt-4">
+    <img src="wpp.png" alt="WhatsApp" width="50" height="50"> Iniciar Conversa pelo WhatsApp
   </a>
 
 <footer class="mt-5 text-center">
@@ -259,3 +261,4 @@
   </footer>
 </body>
 </html>
+
