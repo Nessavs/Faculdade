@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">CEP</h1>
+
+            <p class="lead">Informe um CEP</p>
+
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="cep" placeholder="Digite um CEP">
+                        <input type="text" class="form-control" id="estado" placeholder="Digite o estado">
+                        <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade">
+                        <input type="text" class="form-control" id="rua" placeholder="Digite a rua">
+                    </div>
+                </div>
+            </form>
+
+            <hr class="my-4">
+
+            <button onclick="buscarCep()" class="btn btn-primary btn-lg">Buscar CEP</button>
+            <button onclick="buscarEnderecos()" class="btn btn-primary btn-lg">Buscar endereços</button>
+
+            <h1 class="display-4 text-center" id="resposta"></h1>
+        </div>
+
+        <a class="btn btn-success" href="index.html">Voltar</a>
+    </div>
+
+    <script type="text/javascript">
+        function buscarCep() {
+            let c = document.getElementById('cep').value
+            var xhttp = new XMLHttpRequest();
+           // xhttp.open("GET", 'https://viacep.com.br/ws/' + c + '/json', false)
+
+            xhttp.open("GET", `https://viacep.com.br/ws/${c}/json/`, false)
+
+            xhttp.send()
+            console.log(xhttp.responseText)
+
+            var retorno = JSON.parse(xhttp.responseText)
+            console.log(retorno)
+
+            document.getElementById('resposta').innerHTML =retorno.logradouro
+        }
+
+        function buscarEnderecos() {
+       
+            let estado = document.getElementById('estado').value
+            let cidade = document.getElementById('cidade').value
+            let rua = document.getElementById('rua').value
+
+            var xhttp = new XMLHttpRequest()
+            xhttp.open("GET", `https://viacep.com.br/ws/${estado}/${cidade}/${rua}/json/`, false)
+            xhttp.send()
+            var retorno = JSON.parse(xhttp.responseText)
+
+            var b = document.getElementById('bairros')
+            for (i in retorno) {
+                console.log(retorno[i].bairro)
+                var filho = document.createElement('li')
+                filho.innerHTML = retorno[i].bairro
+                b.appendChild(filho)
+            }
+        }
+    </script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
